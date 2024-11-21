@@ -84,11 +84,3 @@ Edite as seguintes linhas no código Arduino:
   /monitor/humidity: 55.00
   /monitor/status: "Ventilador Ligado"
 
-#Autores#
-
--Gabriel Luni Nakashima
--Melyssa Huang
--Gabriel Lacerda
-
-**Licença**
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
