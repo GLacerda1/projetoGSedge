@@ -9,7 +9,6 @@ Este projeto utiliza um ESP32 integrado com um sensor DHT22 para monitorar tempe
 
 - ESP32 como microcontrolador.
 - DHT22 para leitura de temperatura e umidade.
-- Display OLED para exibição de informações locais.
 - LEDs para indicar o status do sistema.
 
 ## *Software:*
@@ -22,7 +21,6 @@ Este projeto utiliza um ESP32 integrado com um sensor DHT22 para monitorar tempe
 # **Funcionalidades**
 ## *Monitoramento de Temperatura e Umidade:*
 
-- Exibe os dados no display OLED.
 - Publica as informações em tópicos MQTT:
 - /monitor/temperature: Temperatura atual.
 - /monitor/humidity: Umidade atual.
