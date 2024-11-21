@@ -58,17 +58,6 @@ Fluxo de Controle
     A cada intervalo (2 segundos), os gráficos de temperatura e umidade são atualizados.
     O status do sistema também é atualizado a cada intervalo.
 
-Diagrama de Conexão
-
-Este diagrama ilustra as conexões de hardware do sistema de monitoramento, mas no código Python, o foco está na visualização dos dados recebidos via MQTT.
-
-+-------------------+              +-------------------+         +---------------------+
-|   Sensor DHT22    |              |   ESP32 (micro)   |         |       MQTT Broker    |
-| - Temperatura     |   ---> MQTT   |   - Conexão Wi-Fi |  --->   | - Tópicos:           |
-| - Umidade         |              |   - Publicação     |         |   /monitor/temperature|
-+-------------------+              +-------------------+         |   /monitor/humidity  |
-                                (Publica os dados)              |   /monitor/status     |
-                                                                +---------------------+
 
 Exemplo de Saída
 
