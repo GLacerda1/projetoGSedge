@@ -1,4 +1,4 @@
-#**Projeto: Monitoramento IoT com ESP32 e MQTT**#
+# **Projeto: Monitoramento IoT com ESP32 e MQTT**
 
 #*Descrição*#
 
