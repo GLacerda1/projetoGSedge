@@ -11,12 +11,12 @@ Este projeto integra um sistema de monitoramento IoT utilizando o ESP32 para lei
 ### Software:
 
 ### Arduino:
-  ### Conexão Wi-Fi para envio dos dados.
+-  Conexão Wi-Fi para envio dos dados.
 - MQTT (via PubSubClient) para publicação das informações.
-- Dashboard Python:
-    - Dash para criar o painel de controle.
-    - Plotly para gráficos interativos.
-    - paho-mqtt para receber dados do broker MQTT.
+### Dashboard Python:
+  - Dash para criar o painel de controle. 
+  - Plotly para gráficos interativos.
+  - paho-mqtt para receber dados do broker MQTT.
 ## Fluxo de Dados
 ### 1. ESP32:
   -Lê os dados do sensor DHT22.
