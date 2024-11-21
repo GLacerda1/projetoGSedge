@@ -1,5 +1,7 @@
 **Projeto: Monitoramento IoT com ESP32 e MQTT**
+
 *Descrição*
+
 Este projeto utiliza um ESP32 integrado com um sensor DHT22 para monitorar temperatura e umidade em tempo real. As informações são enviadas via MQTT para um broker. Além disso, LEDs controlam dispositivos simulados (ventilador e aquecedor) com base nas leituras.
 
 **Arquitetura**
