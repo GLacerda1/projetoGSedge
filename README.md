@@ -8,7 +8,7 @@ Este projeto integra um sistema de monitoramento IoT utilizando o ESP32 para lei
 - ESP32 como microcontrolador.
 - Sensor DHT22 para leitura de temperatura e umidade.
 - LEDs para simular ventilador e aquecedor.
-### Software:
+## Software:
 ###   Arduino:
   -  Conexão Wi-Fi para envio dos dados.
   - MQTT (via PubSubClient) para publicação das informações.
