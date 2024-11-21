@@ -1,7 +1,7 @@
-Projeto: Monitoramento IoT com Dash e MQTT
+# **Projeto: Monitoramento IoT com Dash e MQTT**
 Descrição
 
-Este projeto utiliza a biblioteca Dash para criar um painel de controle interativo, visualizando dados em tempo real de um sistema de monitoramento IoT. Ele se conecta a um broker MQTT para receber informações de temperatura, umidade e status de um dispositivo (simulado ou real, como um ESP32 com sensores DHT22). Os dados recebidos são exibidos em gráficos e na interface de status do sistema.
+## Este projeto utiliza a biblioteca Dash para criar um painel de controle interativo, visualizando dados em tempo real de um sistema de monitoramento IoT. Ele se conecta a um broker MQTT para receber informações de temperatura, umidade e status de um dispositivo (simulado ou real, como um ESP32 com sensores DHT22). Os dados recebidos são exibidos em gráficos e na interface de status do sistema.
 Arquitetura
 Software:
 
@@ -10,7 +10,7 @@ Software:
     paho-mqtt: Para receber os dados via protocolo MQTT.
     Deque (collections): Para armazenar os dados de forma eficiente e gerenciar a exibição no gráfico.
 
-Fluxo de Dados:
+# **Fluxo de Dados:**
 
     O sistema se conecta a um broker MQTT (como o Mosquitto ou outro broker público).
     O cliente MQTT recebe as mensagens publicadas nos tópicos:
@@ -20,19 +20,19 @@ Fluxo de Dados:
     As mensagens são processadas e armazenadas em filas (deque) para exibição no gráfico e no status.
     O painel Dash exibe os dados de temperatura, umidade e o status de forma interativa e em tempo real.
 
-Funcionalidades:
+# **Funcionalidades:**
 
     Gráfico de Temperatura: Exibe as leituras de temperatura ao longo do tempo.
     Gráfico de Umidade: Exibe as leituras de umidade ao longo do tempo.
     Exibição de Status: Exibe o status atual do sistema (ex.: "Ventilador Ligado", "Aquecedor Desligado").
 
-Como Usar
+# **Como Usar**
 
     Instalação de Dependências: Para rodar este código, você precisa instalar as seguintes bibliotecas Python:
 
 pip install dash plotly paho-mqtt
 
-Configuração do Broker MQTT: Edite as variáveis do código para refletir as configurações do seu broker MQTT:
+# **Configuração do Broker MQTT: Edite as variáveis do código para refletir as configurações do seu broker MQTT:**
 
     BROKER: Endereço IP do broker MQTT (ex.: "4.228.61.195").
     PORT: Porta do broker (normalmente 1883).
@@ -40,7 +40,7 @@ Configuração do Broker MQTT: Edite as variáveis do código para refletir as c
     TOPIC_HUM: Tópico para umidade (/monitor/humidity).
     TOPIC_STATUS: Tópico para o status (/monitor/status).
 
-Executando o Código: Após configurar o broker MQTT, basta rodar o script Python:
+# **Executando o Código: Após configurar o broker MQTT, basta rodar o script Python:**
 
     python app.py
 
@@ -51,7 +51,7 @@ Executando o Código: Após configurar o broker MQTT, basta rodar o script Pytho
         /monitor/humidity: Para umidade.
         /monitor/status: Para o status (ex.: "Ventilador Ligado", "Aquecedor Desligado").
 
-Fluxo de Controle
+# **Fluxo de Controle**
 
     O cliente MQTT conecta-se ao broker e começa a escutar os tópicos configurados.
     As mensagens de temperatura, umidade e status são recebidas e armazenadas em filas (deque).
@@ -59,21 +59,21 @@ Fluxo de Controle
     O status do sistema também é atualizado a cada intervalo.
 
 
-Exemplo de Saída
+# **Exemplo de Saída**
 
-Quando o ESP32 está funcionando corretamente e publicando os dados via MQTT, você verá a seguinte saída no painel Dash:
+# **Quando o ESP32 está funcionando corretamente e publicando os dados via MQTT, você verá a seguinte saída no painel Dash:**
 
     Tópicos MQTT:
         /monitor/temperature: 24.50
         /monitor/humidity: 55.00
         /monitor/status: "Ventilador Ligado"
 
-Autor(es)
+# **Autor(es)**
 
     Gabriel Luni Nakashima
     Melyssa Huang
     Gabriel Lacerda
 
-Licença
+# **Licença**
 
 Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
