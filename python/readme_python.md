@@ -67,13 +67,3 @@ pip install dash plotly paho-mqtt
         /monitor/temperature: 24.50
         /monitor/humidity: 55.00
         /monitor/status: "Ventilador Ligado"
-
-# **Autor(es)**
-
-    Gabriel Luni Nakashima
-    Melyssa Huang
-    Gabriel Lacerda
-
-# **Licença**
-
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
