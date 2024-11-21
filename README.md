@@ -10,7 +10,7 @@ Este projeto integra um sistema de monitoramento IoT utilizando o ESP32 para lei
 - LEDs para simular ventilador e aquecedor.
 ### Software:
 
-### Arduino:
+  ### Arduino:
 -  Conexão Wi-Fi para envio dos dados.
 - MQTT (via PubSubClient) para publicação das informações.
 ### Dashboard Python:
