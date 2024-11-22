@@ -74,13 +74,11 @@ Edite as seguintes linhas no código Arduino:
   -Aquecer se a temperatura for baixa.
   -Ventilar se a temperatura for alta ou houver excesso de umidade.
 
-# **Diagrama de Conexão**
-- Inclua um diagrama (em imagem ou ASCII) para ilustrar as conexões do ESP32, sensores e LEDs.
-
-# **Exemplo de Saída**
+# **Arquitetura**
+![image](https://github.com/user-attachments/assets/7e60922e-a31e-4648-8237-6a1d1a1050c1)
 
 ## *Tópicos MQTT:*
-  /monitor/temperature: 24.50
-  /monitor/humidity: 55.00
-  /monitor/status: "Ventilador Ligado"
+      /monitor/temperature: 24.50
+      /monitor/humidity: 55.00
+      /monitor/status: "Ventilador Ligado"
 
