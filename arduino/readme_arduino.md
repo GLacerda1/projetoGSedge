@@ -37,10 +37,10 @@ Este projeto utiliza um ESP32 integrado com um sensor DHT22 para monitorar tempe
 
 Edite as seguintes linhas no código Arduino:
 
-  const char* ssid = "Wokwi-GUEST";      // Substitua pelo nome da sua rede Wi-Fi.
-  const char* password = "";             // Substitua pela senha da sua rede Wi-Fi.
-  const char* mqtt_server = "BROKER_IP"; // Substitua pelo IP público do seu broker MQTT.
-  const int mqtt_port = 1883;            // Porta padrão do MQTT (1883).
+    const char* ssid = "Wokwi-GUEST";      // Substitua pelo nome da sua rede Wi-Fi.
+    const char* password = "";             // Substitua pela senha da sua rede Wi-Fi.
+    const char* mqtt_server = "BROKER_IP"; // Substitua pelo IP público do seu broker MQTT.
+    const int mqtt_port = 1883;            // Porta padrão do MQTT (1883).
 
 ## **2.Componentes e Conexões:**
 
