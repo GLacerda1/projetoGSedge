@@ -1,7 +1,5 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
-#include <Wire.h>
-#include <Adafruit_SSD1306.h>
 #include <DHT.h>
 
 // Configurações do DHT
@@ -21,11 +19,6 @@ const char* topic_status = "/monitor/status";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
-
-// Configurações do display OLED
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 // Pinos dos LEDs
 #define FAN_LED_PIN 13
@@ -73,47 +66,12 @@ void setup() {
     setupWiFi();
     client.setServer(mqtt_server, mqtt_port);
 
-    // Inicializa display OLED
-    if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-        Serial.println("Erro ao inicializar o display OLED.");
-        while (true);
-    }
-    display.clearDisplay();
-
     // Inicializa DHT e LEDs
     dht.begin();
     pinMode(FAN_LED_PIN, OUTPUT);
     pinMode(HEATER_LED_PIN, OUTPUT);
     digitalWrite(FAN_LED_PIN, LOW);
     digitalWrite(HEATER_LED_PIN, LOW);
-}
-
-void displayInfo(float t, float h, const char* status) {
-    display.clearDisplay();
-    display.setTextSize(1);
-    display.setTextColor(SSD1306_WHITE);
-
-    // Exibe informações de temperatura e umidade
-    display.setCursor(0, 0);
-    display.printf("Temp: %.2f C", t);
-    display.setCursor(0, 10);
-    display.printf("Hum: %.2f %%", h);
-
-    // Exibe status do sistema
-    display.setCursor(0, 30);
-    display.println("Status:");
-    display.setCursor(0, 40);
-    display.println(status);
-
-    // Exibe status da conexão Wi-Fi
-    display.setCursor(0, 55);
-    if (WiFi.status() == WL_CONNECTED) {
-        display.print("Wi-Fi: OK");
-    } else {
-        display.print("Wi-Fi: OFF");
-    }
-
-    display.display(); // Atualiza o display
 }
 
 void loop() {
@@ -148,8 +106,8 @@ void loop() {
         status = "Sistema Desligado";
     }
 
-    // Atualiza informações no display
-    displayInfo(t, h, status);
+    // Log no Serial Monitor
+    Serial.printf("Temp: %.2f C, Hum: %.2f %%, Status: %s\n", t, h, status);
 
     // Envia dados via MQTT
     sendMQTT(t, h, status);
